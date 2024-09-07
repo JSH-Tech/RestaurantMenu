@@ -1,0 +1,169 @@
+﻿<Page x:Class="RestaurantMenu.Recette"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestaurantMenu"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      d:DesignHeight="520" d:DesignWidth="900"
+      Title="Recette">
+
+    <Grid>
+
+        <!-- You need to wrap ColumnDefinition inside ColumnDefinitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <materialDesign:Card Grid.Row="0" Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Height="140" Source="/ratatouille.jpg" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Margin="0,0,16,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8,24,8,4">
+                    <TextBlock Margin="0" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Ratatouille" />
+                    <Viewbox Height="16" Margin="0,4,0,8" HorizontalAlignment="Left">
+                        <materialDesign:RatingBar Margin="0" Foreground="Gold" Orientation="Horizontal" Value="3" />
+                    </Viewbox>
+                    <Button x:Name="Btn_RecetteRatatouille" Content="VOIR LA RECETTE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFlatLightBgButton}" ToolTip="MaterialDesignFlatLightButton" Click="Btn_RecetteRatatouille_Click" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Grid.Row="0" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Height="140" Source="/selfishpot.jpg" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Margin="0,0,16,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8,24,8,4">
+                    <TextBlock Margin="0" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Selfish Pot" />
+                    <Viewbox Height="16" Margin="0,4,0,8" HorizontalAlignment="Left">
+                        <materialDesign:RatingBar Margin="0" Foreground="Gold" Orientation="Horizontal" Value="3" />
+                    </Viewbox>
+                    <Button Content="VOIR LA RECETTE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFlatLightBgButton}" ToolTip="MaterialDesignFlatLightButton" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="0" Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Height="140" Source="/burger.jpg" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Margin="0,0,16,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8,24,8,4">
+                    <TextBlock Margin="0" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Burger" />
+                    <Viewbox Height="16" Margin="0,4,0,8" HorizontalAlignment="Left">
+                        <materialDesign:RatingBar Margin="0" Foreground="Gold" Orientation="Horizontal" Value="3" />
+                    </Viewbox>
+                    <Button Content="VOIR LA RECETTE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFlatLightBgButton}" ToolTip="MaterialDesignFlatLightButton" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Grid.Row="1" Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Height="140" Source="/springrolls.jpg" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Margin="0,0,16,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8,24,8,4">
+                    <TextBlock Margin="0" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Spring Rolls" />
+                    <Viewbox Height="16" Margin="0,4,0,8" HorizontalAlignment="Left">
+                        <materialDesign:RatingBar Margin="0" Foreground="Gold" Orientation="Horizontal" Value="3" />
+                    </Viewbox>
+                    <Button Content="VOIR LA RECETTE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFlatLightBgButton}" ToolTip="MaterialDesignFlatLightButton" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Grid.Row="1" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Height="140" Source="/Herloom.jpg" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Margin="0,0,16,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8,24,8,4">
+                    <TextBlock Margin="0" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Herloom Tomatoes Salad" />
+                    <Viewbox Height="16" Margin="0,4,0,8" HorizontalAlignment="Left">
+                        <materialDesign:RatingBar Margin="0" Foreground="Gold" Orientation="Horizontal" Value="3" />
+                    </Viewbox>
+                    <Button Content="VOIR LA RECETTE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFlatLightBgButton}" ToolTip="MaterialDesignFlatLightButton" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card Grid.Row="1" Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Height="140" Source="/burrata.jpg" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Margin="0,0,16,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8,24,8,4">
+                    <TextBlock Margin="0" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Text="Burrata" />
+                    <Viewbox Height="16" Margin="0,4,0,8" HorizontalAlignment="Left">
+                        <materialDesign:RatingBar Margin="0" Foreground="Gold" Orientation="Horizontal" Value="3" />
+                    </Viewbox>
+                    <Button Content="VOIR LA RECETTE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFlatLightBgButton}" ToolTip="MaterialDesignFlatLightButton" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+        <!-- Add your content for the Grid here -->
+    </Grid>
+</Page>
